@@ -1,0 +1,7 @@
+- name: Upgrade whole system
+  pacman:
+    upgrade: yes
+- name: Install git
+  pacman:
+    name: git
+    state: latest

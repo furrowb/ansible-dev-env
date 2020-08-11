@@ -3,15 +3,10 @@
   vars:
     repo_dir: "{{ ansible_env.HOME }}/repos"
   tasks:
-  - name: Upgrade whole system
-    pacman:
-      upgrade: yes
+  - include: os_specific/arch.yml
     when: ansible_os_family == 'Arch'
-  - name: Install git
-    pacman:
-      name: git
-      state: latest
-    when: ansible_os_family == 'Arch'
+  - include: os_specific/debian.yml
+    when: ansible_os_family == 'Debian'
   - name: Create repo directory
     file:
       path: "{{ repo_dir }}"
