@@ -15,4 +15,6 @@ Once Ansible is installed, just use the following:
 ansible-playbook playbook.yml
 ```
 
-In order for the zsh theme to work appropriately, you must select a `Powerline` family font in your terminal of choice.  Otherwise, you will see weird characters in the terminal.
+## Common issues
+
+- In order for the zsh theme to work appropriately, you must select a `Powerline` family font in your terminal of choice.  Otherwise, you will see weird characters in the terminal.
