@@ -1,0 +1,14 @@
+---
+- name: Clone Powerline fonts
+  git:
+    repo: https://github.com/powerline/fonts
+    dest: "{{ repo_dir }}/fonts"
+    update: no
+- name: Check if fonts already installed
+  shell: fc-list | grep powerline
+  register: fonts_check
+- debug:
+    var: fonts_check
+- name: Install Powerline fonts
+  shell: "{{ repo_dir }}/fonts/install.sh"
+  when: fonts_check.stdout == ""

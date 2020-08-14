@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
-  vars:
-    repo_dir: "{{ ansible_env.HOME }}/repos"
+  vars_files:
+  - "variables.yml"
   tasks:
   - include: os_specific/arch.yml
     when: ansible_os_family == 'Arch'
@@ -11,30 +11,6 @@
     file:
       path: "{{ repo_dir }}"
       state: directory
-  - name: Clone dotfiles 
-    git:
-      repo: https://github.com/furrowb/dotfiles
-      dest: "{{ ansible_env.HOME }}/.dotfiles"
-      update: yes
-  - name: Clone Powerline fonts
-    git:
-      repo: https://github.com/powerline/fonts
-      dest: "{{ repo_dir }}/fonts"
-      update: no
-  # - name: Install Powerline fonts
-  #   shell: "{{ repo_dir }}/fonts/install.sh"
-  - name: Sym link vimrc
-    file:
-      src: "{{ ansible_env.HOME }}/.dotfiles/.vimrc"
-      dest: "{{ ansible_env.HOME }}/.vimrc"
-      state: link
-  - name: Sym link zshrc
-    file:
-      src: "{{ ansible_env.HOME }}/.dotfiles/.zshrc"
-      dest: "{{ ansible_env.HOME }}/.zshrc"
-      state: link
-  - name: Sym link gitconfig
-    file:
-      src: "{{ ansible_env.HOME }}/.dotfiles/.gitconfig"
-      dest: "{{ ansible_env.HOME }}/.gitconfig"
-      state: link
+  - include: tools/fonts.yml
+  - include: tools/oh-my-zsh.yml
+  - include: tools/dotfiles.yml
