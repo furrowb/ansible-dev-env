@@ -2,7 +2,6 @@
   apt:
     name: git
     state: latest
-    update_cache: yes
 - name: Install zsh 
   apt:
     name: zsh

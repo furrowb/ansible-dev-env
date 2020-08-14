@@ -5,7 +5,8 @@
     dest: "{{ repo_dir }}/fonts"
     update: no
 - name: Check if fonts already installed
-  shell: fc-list | grep powerline
+  shell: fc-list | grep -i powerline
+  ignore_errors: yes
   register: fonts_check
 - debug:
     var: fonts_check

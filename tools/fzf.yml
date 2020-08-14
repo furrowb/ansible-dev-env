@@ -1,0 +1,13 @@
+---
+- name: Check if fzf is installed
+  command: which fzf
+  ignore_errors: yes
+  register: check_fzf
+- name: Retrieve fzf
+  git:
+    repo: https://github.com/junegunn/fzf.git
+    dest: "{{ ansible_env.HOME }}/.fzf"
+    update: no
+  when: check_fzf.stdout != ""
+- name: Install fzf
+  command: "{{ ansible_env.HOME }}/.fzf/install --all"

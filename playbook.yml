@@ -13,4 +13,5 @@
       state: directory
   - include: tools/fonts.yml
   - include: tools/oh-my-zsh.yml
+  - include: tools/fzf.yml
   - include: tools/dotfiles.yml
