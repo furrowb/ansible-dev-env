@@ -3,10 +3,7 @@
   vars_files:
   - "variables.yml"
   tasks:
-  - include: os_specific/arch.yml
-    when: ansible_os_family == 'Arch'
-  - include: os_specific/debian.yml
-    when: ansible_os_family == 'Debian'
+  - include: os_specific/{{ ansible_os_family }}.yml
   - name: Create repo directory
     file:
       path: "{{ repo_dir }}"
