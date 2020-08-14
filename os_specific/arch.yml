@@ -1,3 +1,4 @@
+---
 - name: Upgrade whole system
   pacman:
     upgrade: yes

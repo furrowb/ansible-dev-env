@@ -8,8 +8,6 @@
   shell: fc-list | grep -i powerline
   ignore_errors: yes
   register: fonts_check
-- debug:
-    var: fonts_check
 - name: Install Powerline fonts
   shell: "{{ repo_dir }}/fonts/install.sh"
   when: fonts_check.stdout == ""
