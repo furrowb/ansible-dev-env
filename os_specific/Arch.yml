@@ -14,3 +14,7 @@
   pacman:
     name: vim
     state: latest
+- name: Install VSCode
+  pacman:
+    name: code
+    state: latest
