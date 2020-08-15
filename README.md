@@ -12,8 +12,10 @@ sudo apt-get install ansible
 Once Ansible is installed, just use the following:
 
 ```shell
-ansible-playbook playbook.yml
+ansible-playbook playbook.yml -K
 ```
+
+This prompts you for the user's password which must have sudo access.
 
 ## Common issues
 
