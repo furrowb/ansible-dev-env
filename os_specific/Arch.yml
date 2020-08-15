@@ -10,3 +10,7 @@
   pacman:
     name: zsh
     state: latest
+- name: Install vim
+  pacman:
+    name: vim
+    state: latest

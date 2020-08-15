@@ -7,3 +7,7 @@
   package:
     name: zsh
     state: present
+- name: Install vim
+  package:
+    name: vim
+    state: present

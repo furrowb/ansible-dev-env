@@ -1,0 +1,8 @@
+---
+- name: Install vim plugin manager
+  git:
+    repo: https://github.com/VundleVim/Vundle.vim.git
+    dest: "{{ ansible_env.HOME }}/.vim/bundles/Vundle.vim"
+    update: yes
+- name: Install vim plugins
+  command: vim +PluginInstall +qall

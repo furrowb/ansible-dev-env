@@ -12,3 +12,4 @@
   - include: tools/oh-my-zsh.yml
   - include: tools/fzf.yml
   - include: tools/dotfiles.yml
+  - include: tools/vim.yml
