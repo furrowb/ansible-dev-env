@@ -3,11 +3,15 @@
   vars_files:
   - "variables.yml"
   tasks:
-  - include: os_specific/{{ ansible_os_family }}.yml
+  - name: Create Downloads directory
+    file:
+      path: "{{ ansible_env.HOME }}/Downloads"
+      state: directory
   - name: Create repo directory
     file:
       path: "{{ repo_dir }}"
       state: directory
+  - include: os_specific/{{ ansible_os_family }}.yml
   - include: tools/fonts.yml
   - include: tools/oh-my-zsh.yml
   - include: tools/fzf.yml
