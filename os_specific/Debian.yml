@@ -25,3 +25,7 @@
   apt: deb="{{ ansible_env.HOME }}/Downloads/vscode.deb"
   sudo: true
   when: check_vscode.changed
+- name: Remove VSCode download
+  file:
+    path: "{{ ansible_env.HOME }}/Downloads/vscode.deb"
+    state: absent
