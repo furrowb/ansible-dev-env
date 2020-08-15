@@ -1,0 +1,9 @@
+---
+- name: Install Git
+  package:
+    name: git
+    state: present
+- name: Install zsh
+  package:
+    name: zsh
+    state: present
