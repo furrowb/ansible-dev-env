@@ -19,4 +19,6 @@ This prompts you for the user's password which must have sudo access.
 
 ## Common issues
 
-- In order for the zsh theme to work appropriately, you must select a `Powerline` family font in your terminal of choice.  Otherwise, you will see weird characters in the terminal.
+### Terminal has weird characters
+
+In order for the ZSH theme to work appropriately, you must select a `Powerline` family font in your terminal of choice.
