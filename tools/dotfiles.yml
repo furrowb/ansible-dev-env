@@ -1,5 +1,5 @@
 ---
-- name: Clone dotfiles 
+- name: Clone dotfiles
   git:
     repo: https://github.com/furrowb/dotfiles
     dest: "{{ ansible_env.HOME }}/.dotfiles"
