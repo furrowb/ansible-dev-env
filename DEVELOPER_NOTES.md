@@ -14,9 +14,9 @@ Then you can run the containers with the following:
 
 ```shell
 # To run Ubuntu
-docker run --rm -it -v ${PWD}:/home/not_root/ansible ubuntu-test:latest /usr/bin/bash
+docker run --rm -it -v ${PWD}:/home/not_root/ansible ubuntu_test:latest /usr/bin/bash
 # To run Arch
-docker run --rm -it -v ${PWD}:/home/not_root/ansible arch-test:latest /usr/bin/bash
+docker run --rm -it -v ${PWD}:/home/not_root/ansible arch_test:latest /usr/bin/bash
 ```
 
 In the containers, you can go to the go to the `ansible` directory and run the playbook with this:
