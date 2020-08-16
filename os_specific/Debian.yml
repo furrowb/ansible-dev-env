@@ -14,22 +14,22 @@
   apt:
     name: vim
     state: present
-# - name: Check for VSCode
-#   command:
-#     - dpkg-query -W code
-#   register: check_vscode
-#   failed_when: check_vscode.rc > 1
-#   changed_when: check_vscode.rc == 1
+- name: Check for VSCode
+  command: which code
+  register: check_vscode
+  ignore_errors: yes
 - name: Retrieve VSCode
   get_url:
     url: https://go.microsoft.com/fwlink/?LinkID=760868
     dest: "{{ ansible_env.HOME }}/Downloads/vscode.deb"
-  # when: check_vscode.changed
+  when: check_vscode.stdout == ""
 - name: Install VSCode
   become: yes
   apt:
     deb: "{{ ansible_env.HOME }}/Downloads/vscode.deb"
+  when: check_vscode.stdout == ""
 - name: Remove VSCode download
   file:
     path: "{{ ansible_env.HOME }}/Downloads/vscode.deb"
     state: absent
+  when: check_vscode.stdout == ""

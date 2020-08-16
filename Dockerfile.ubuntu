@@ -8,4 +8,4 @@ RUN apt-get update && \
 RUN useradd -ms /bin/bash -G sudo -u 1001 not_root
 RUN echo "not_root:password" | chpasswd
 USER not_root
-CMD ["/usr/bin/bash"]
+WORKDIR /home/not_root/

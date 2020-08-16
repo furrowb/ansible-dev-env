@@ -1,15 +1,14 @@
 ---
-- name: Upgrade whole system
-  pacman:
-    upgrade: yes
 - name: Install git
   pacman:
     name: git
     state: latest
+  become: yes
 - name: Install zsh
   pacman:
     name: zsh
     state: latest
+  become: yes
 - name: Install vim
   pacman:
     name: vim
@@ -19,3 +18,4 @@
   pacman:
     name: code
     state: latest
+  become: yes

@@ -1,0 +1,11 @@
+FROM archlinux:20200705
+
+RUN pacman -Syy --noconfirm && \
+    pacman -S --noconfirm ansible curl sudo
+
+RUN groupadd sudo &&\
+    useradd -ms /bin/bash -G sudo -u 1001 not_root
+RUN echo "not_root:password" | chpasswd
+RUN echo "%sudo      ALL=(ALL:ALL) ALL" >> /etc/sudoers
+USER not_root
+WORKDIR /home/not_root/
