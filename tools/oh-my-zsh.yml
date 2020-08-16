@@ -3,11 +3,19 @@
   stat:
     path: "{{ ansible_env.HOME }}/.oh-my-zsh"
   register: check_ohmyzsh
-- name: Install oh-my-zsh
-  command: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+- name: Retrieve oh-my-zsh script
+  get_url:
+    url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    dest: "{{ ansible_env.HOME }}/Downloads/install.sh"
+    mode: 0744
   when: check_ohmyzsh.stat.exists == False
+- name: Install oh-my-zsh
+  command: "{{ ansible_env.HOME }}/Downloads/install.sh"
+  when: check_ohmyzsh.stat.exists == False
+  register: install_ohmyzsh
 - name: Install bullet-train theme
   get_url:
     url: http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
     dest: "{{ ansible_env.HOME }}/.oh-my-zsh/themes/bullet-train.zsh-theme"
+    mode: 0644
   when: check_ohmyzsh.stat.exists == False

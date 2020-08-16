@@ -4,6 +4,12 @@
     repo: https://github.com/furrowb/dotfiles
     dest: "{{ ansible_env.HOME }}/.dotfiles"
     update: yes
+- name: Remove old zshrc file
+  file:
+    path: "{{ ansible_env.HOME }}/.zshrc.old"
+    state: absent
+- name: Rename zshrc to zshrc.old
+  command: "mv {{ ansible_env.HOME }}/.zshrc {{ ansible_env.HOME }}/.zshrc.old"
 - name: Sym link vimrc
   file:
     src: "{{ ansible_env.HOME }}/.dotfiles/.vimrc"

@@ -8,7 +8,7 @@
     repo: https://github.com/junegunn/fzf.git
     dest: "{{ ansible_env.HOME }}/.fzf"
     update: no
-  when: check_fzf.stdout != ""
+  when: check_fzf.stdout == ""
   register: retrieve_fzf
 - name: Install fzf
   command: "{{ ansible_env.HOME }}/.fzf/install --all"
