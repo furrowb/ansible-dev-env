@@ -7,7 +7,7 @@
   get_url:
     url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
     dest: "{{ ansible_env.HOME }}/Downloads/install.sh"
-    mode: 744
+    mode: 0744
   when: check_ohmyzsh.stat.exists == False
 - name: Install oh-my-zsh
   command: "{{ ansible_env.HOME }}/Downloads/install.sh"
@@ -17,5 +17,5 @@
   get_url:
     url: http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
     dest: "{{ ansible_env.HOME }}/.oh-my-zsh/themes/bullet-train.zsh-theme"
-    mode: 644
+    mode: 0644
   when: check_ohmyzsh.stat.exists == False

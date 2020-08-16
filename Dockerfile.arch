@@ -1,7 +1,7 @@
 FROM archlinux:20200705
 
 RUN pacman -Syy --noconfirm && \
-    pacman -S --noconfirm ansible curl sudo
+    pacman -S --noconfirm ansible curl sudo which
 
 RUN groupadd sudo &&\
     useradd -ms /bin/bash -G sudo -u 1001 not_root
