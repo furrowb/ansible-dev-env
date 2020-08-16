@@ -22,14 +22,20 @@
   get_url:
     url: https://go.microsoft.com/fwlink/?LinkID=760868
     dest: "{{ ansible_env.HOME }}/Downloads/vscode.deb"
-  when: check_vscode.stdout == ""
+  when:
+    - check_vscode.stdout == ""
+    - ansible_architecture == "x86_64"
 - name: Install VSCode
   become: yes
   apt:
     deb: "{{ ansible_env.HOME }}/Downloads/vscode.deb"
-  when: check_vscode.stdout == ""
+  when:
+    - check_vscode.stdout == ""
+    - ansible_architecture == "x86_64"
 - name: Remove VSCode download
   file:
     path: "{{ ansible_env.HOME }}/Downloads/vscode.deb"
     state: absent
-  when: check_vscode.stdout == ""
+  when:
+    - check_vscode.stdout == ""
+    - ansible_architecture == "x86_64"

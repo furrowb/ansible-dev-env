@@ -18,4 +18,3 @@
     url: http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
     dest: "{{ ansible_env.HOME }}/.oh-my-zsh/themes/bullet-train.zsh-theme"
     mode: 0644
-  when: check_ohmyzsh.stat.exists == False
