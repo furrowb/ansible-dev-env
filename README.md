@@ -54,6 +54,12 @@ Another editor but more powerful than Vim. Provides a more pleasing editing expe
 
 While likely installed on most Unix machines already, Git is the most popular source control tool out today. Chances are if you're reading this, you are already familiar with it.
 
+### Docker
+
+https://docs.docker.com/
+
+Docker is a great tool for creating/using reusable environments for applications. I even used it to verify that this Ansible playbook works as I intended.
+
 ## Common issues
 
 ### Terminal has weird characters
