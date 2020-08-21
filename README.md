@@ -1,6 +1,6 @@
 # Environment Setup
 
-This playbook is my way to setup my personal development environment. In order to get started, first install ansible
+This playbook is my way to setup my personal development environment. In order to get started, first install ansible:
 
 ```shell
 # Arch/Manjaro
@@ -21,17 +21,17 @@ This prompts you for the user's password which must have sudo access.
 
 ### ZSH
 
-ZSH (z-shell) is a replacement shell for bash. It provides many quality of life improvements for developers and is a tool I recommend for any Unix developers
+ZSH (z-shell) is a replacement shell for bash. It provides many quality of life improvements for developers and is a tool I recommend for any Unix developers.
 
 ### Oh-My-ZSH
 
 https://ohmyz.sh/
 
-A complement to ZSH, provides additional functionality on top of ZSH. There are tons of plugins and themes to enhance ZSH. I use the `bullet-train` theme for my environment but `agnostic` is pretty close
+A complement to ZSH, provides additional functionality on top of ZSH. There are tons of plugins and themes to enhance ZSH. I use the [bullet-train](https://github.com/caiogondim/bullet-train.zsh) theme for my environment but `agnostic` is pretty close.
 
 ### Powerline Fonts
 
-In order to use the Oh-My-ZSH theme, it requires Powerline fonts to be installed.
+In order to use most of the Oh-My-ZSH themes, it requires Powerline fonts to be installed.
 
 ### Fzf
 
@@ -52,7 +52,7 @@ Another editor but more powerful than Vim. Provides a more pleasing editing expe
 
 ### Git
 
-While likely installed on most Unix machines already, Git is the most popular source control tool out today. Chances are if you're reading this, you probably are at least somewhat familiar with it.
+While likely installed on most Unix machines already, Git is the most popular source control tool out today. Chances are if you're reading this, you are already familiar with it.
 
 ## Common issues
 
