@@ -17,3 +17,5 @@
   - include: tools/fzf.yml
   - include: tools/dotfiles.yml
   - include: tools/vim.yml
+  - include: tools/docker.yml
+    when: ansible_architecture == "x86_64"
