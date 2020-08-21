@@ -21,7 +21,7 @@ This prompts you for the user's password which must have sudo access.
 
 ### ZSH
 
-ZSH (z-shell) is a replacement shell for bash. It provides many quality of life improvements for developers and is a tool I recommend for any Unix developers.
+ZSH (z-shell) is a replacement shell for bash. It provides many quality of life improvements for developers and is a tool I recommend for any Unix developer.
 
 ### Oh-My-ZSH
 
@@ -31,7 +31,7 @@ A complement to ZSH, provides additional functionality on top of ZSH. There are 
 
 ### Powerline Fonts
 
-In order to use most of the Oh-My-ZSH themes, it requires Powerline fonts to be installed.
+In order to use most of the Oh-My-ZSH themes, Powerline fonts are required.
 
 ### Fzf
 
