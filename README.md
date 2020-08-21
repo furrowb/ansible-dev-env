@@ -5,7 +5,7 @@ This playbook is my way to setup my personal development environment. In order t
 ```shell
 # Arch/Manjaro
 sudo pacman -S ansible
-# Debian/Ubuntu - Not applicable yet
+# Debian/Ubuntu
 sudo apt-get install ansible
 ```
 
