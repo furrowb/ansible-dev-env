@@ -27,7 +27,7 @@ ZSH (z-shell) is a replacement shell for bash. It provides many quality of life 
 
 https://ohmyz.sh/
 
-A complement to ZSH, provides additional functionality on top of ZSH. There are tons of plugins and themes to enhance ZSH. I use the [bullet-train](https://github.com/caiogondim/bullet-train.zsh) theme for my environment but `agnostic` is pretty close.
+A complement to ZSH, provides additional functionality on top of ZSH. There are tons of plugins and themes to enhance ZSH. I use the [bullet-train](https://github.com/caiogondim/bullet-train.zsh) theme for my environment which was inspired by the `agnoster` theme.
 
 ### Powerline Fonts
 
