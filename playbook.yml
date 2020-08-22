@@ -19,3 +19,9 @@
   - include: tools/vim.yml
   - include: tools/docker.yml
     when: ansible_architecture == "x86_64"
+  - name: Is VSCode Installed
+    command: which code
+    register: check_vscode
+    ignore_errors: yes
+  - include: tools/vscode.yml
+    when: check_vscode.stdout != ""
