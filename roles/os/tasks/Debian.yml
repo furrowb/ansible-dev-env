@@ -1,4 +1,12 @@
 ---
+- name: Update cache
+  become: yes
+  apt:
+    update_cache: yes
+- name: Upgrade system
+  become: yes
+  apt:
+    upgrade: safe
 - name: Install git
   become: yes
   apt:

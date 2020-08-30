@@ -2,6 +2,6 @@
 - name: Setup dev environment
   hosts: localhost
   roles:
-  - os
   - enablers
+  - os
   - tools
