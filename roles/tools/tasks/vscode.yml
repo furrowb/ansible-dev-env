@@ -1,6 +1,6 @@
 ---
 - name: Install VSCode Vim extension
-  command: code --install-extension vscodevim
+  command: code --install-extension vscodevim.vim
   ignore_errors: yes
 - name: Install VSCode trailing spaces extension
   command: code --install-extension shardulm94.trailing-spaces

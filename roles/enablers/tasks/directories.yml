@@ -1,0 +1,9 @@
+---
+- name: Create downloads directory
+  file:
+    path: "{{ ansible_env.HOME }}/Downloads"
+    state: directory
+- name: Create repo directory
+  file:
+    path: "{{ repo_dir }}"
+    state: directory
