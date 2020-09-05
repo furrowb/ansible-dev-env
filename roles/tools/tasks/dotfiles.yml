@@ -15,6 +15,12 @@
     src: "{{ ansible_env.HOME }}/.dotfiles/.vimrc"
     dest: "{{ ansible_env.HOME }}/.vimrc"
     state: link
+- name: Remove old gitconfig file
+  file:
+    path: "{{ ansible_env.HOME }}/.gitconfig.old"
+    state: absent
+- name: Rename gitconfig to gitconfig.old
+  command: "mv {{ ansible_env.HOME }}/.gitconfig {{ ansible_env.HOME }}/.gitconfig.old"
 - name: Sym link zshrc
   file:
     src: "{{ ansible_env.HOME }}/.dotfiles/.zshrc"
