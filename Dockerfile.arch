@@ -1,6 +1,7 @@
 FROM archlinux:20200705
 
 RUN pacman -Syy --noconfirm && \
+    pacman -Su --noconfirm && \
     pacman -S --noconfirm ansible curl sudo which
 
 RUN groupadd sudo &&\

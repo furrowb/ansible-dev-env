@@ -10,6 +10,7 @@
     state: absent
 - name: Rename zshrc to zshrc.old
   command: "mv {{ ansible_env.HOME }}/.zshrc {{ ansible_env.HOME }}/.zshrc.old"
+  ignore_errors: true
 - name: Sym link vimrc
   file:
     src: "{{ ansible_env.HOME }}/.dotfiles/.vimrc"
@@ -21,6 +22,7 @@
     state: absent
 - name: Rename gitconfig to gitconfig.old
   command: "mv {{ ansible_env.HOME }}/.gitconfig {{ ansible_env.HOME }}/.gitconfig.old"
+  ignore_errors: true
 - name: Sym link zshrc
   file:
     src: "{{ ansible_env.HOME }}/.dotfiles/.zshrc"

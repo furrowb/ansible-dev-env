@@ -1,2 +1,6 @@
 ---
+- name: Create downloads directory
+  file:
+    path: "{{ ansible_env.HOME }}/Downloads"
+    state: directory
 - include: "{{ ansible_os_family }}.yml"
