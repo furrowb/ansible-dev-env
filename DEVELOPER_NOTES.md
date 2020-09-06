@@ -25,3 +25,15 @@ In the containers, you can go to the go to the `ansible` directory and run the p
 cd ansible
 ansible-playbook --extra-vars "ansible_sudo_pass=password" -u not_root playbook.yml
 ```
+
+## Common issues
+
+### Ubuntu reports issue when attempting to update the cache
+
+Ansible errors out with the following error:
+
+```
+Error ppa.launchpad.net/ansible/ansible/ubuntu groovy release does not have a release file when running apt update via ansible or without ansible.
+```
+
+It requires removing the ansible ppa with the following command: `sudo apt-add-repository --remove ppa:ansible/ansible`
