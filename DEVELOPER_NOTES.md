@@ -26,7 +26,7 @@ cd ansible
 ansible-playbook --extra-vars "ansible_sudo_pass=password" -u not_root playbook.yml
 ```
 
-## Common issues
+## Common Issues
 
 ### Ubuntu reports issue when attempting to update the cache
 
@@ -37,3 +37,7 @@ Error ppa.launchpad.net/ansible/ansible/ubuntu groovy release does not have a re
 ```
 
 It requires removing the ansible ppa with the following command: `sudo apt-add-repository --remove ppa:ansible/ansible`
+
+### ZSH prompts "character not in range"
+
+This appears to be an issue with the `locale` not being setup. Normally, you could use something like `localectl set-locale LANG=en_US.UTF-8` and correct it but this gives another error about how the system wasn't started with systemd.
