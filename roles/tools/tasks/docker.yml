@@ -13,5 +13,6 @@
   user:
     name: "{{ ansible_user }}"
     append: yes
-    groups: docker
+    groups:
+      - docker
   become: yes
