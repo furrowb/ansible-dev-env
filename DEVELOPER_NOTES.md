@@ -26,6 +26,14 @@ cd ansible
 ansible-playbook --extra-vars "ansible_sudo_pass=password" -u not_root playbook.yml
 ```
 
+## Debugging tools
+
+### Find all Ansible system facts
+
+```shell
+ansible localhost -m ansible.builtin.setup
+```
+
 ## Common Issues
 
 ### Ubuntu reports issue when attempting to update the cache

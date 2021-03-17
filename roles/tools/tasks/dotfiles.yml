@@ -33,3 +33,8 @@
     src: "{{ ansible_env.HOME }}/.dotfiles/.gitconfig"
     dest: "{{ ansible_env.HOME }}/.gitconfig"
     state: link
+- name: Sym link Neovim config
+  file:
+    src: "{{ ansible_env.HOME }}/.dotfiles/init.vim"
+    dest: "{{ ansible_env.HOME }}/.config/nvim/init.vim"
+    state: link
