@@ -40,7 +40,7 @@ ansible localhost -m ansible.builtin.setup
 
 Ansible errors out with the following error:
 
-```
+```log
 Error ppa.launchpad.net/ansible/ansible/ubuntu groovy release does not have a release file when running apt update via ansible or without ansible.
 ```
 
@@ -48,4 +48,4 @@ It requires removing the ansible ppa with the following command: `sudo apt-add-r
 
 ### ZSH prompts "character not in range"
 
-This appears to be an issue with the `locale` not being setup. Normally, you could use something like `localectl set-locale LANG=en_US.UTF-8` and correct it but this gives another error about how the system wasn't started with systemd.
+This appears to be an issue with the `locale` not being setup. Normally, you could use something like `localectl set-locale LANG=en_US.UTF-8` and correct it but this gives another error about how the system wasn't started with systemd
