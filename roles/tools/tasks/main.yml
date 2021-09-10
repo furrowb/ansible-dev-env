@@ -1,9 +1,9 @@
 ---
 - include: oh-my-zsh.yml
 - include: fzf.yml
+- include: neovim.yml
 - include: dotfiles.yml
 - include: vim.yml
-- include: neovim.yml
 - include: docker.yml
   when: ansible_architecture == "x86_64"
 - name: Is VSCode Installed
