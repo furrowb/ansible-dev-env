@@ -1,14 +1,14 @@
 ---
-- include: oh-my-zsh.yml
-- include: fzf.yml
-- include: neovim.yml
-- include: dotfiles.yml
-- include: vim.yml
-- include: docker.yml
+- include_tasks: oh-my-zsh.yml
+- include_tasks: fzf.yml
+- include_tasks: neovim.yml
+- include_tasks: dotfiles.yml
+- include_tasks: vim.yml
+- include_tasks: docker.yml
   when: ansible_architecture == "x86_64"
 - name: Is VSCode Installed
   command: which code
   register: check_vscode
   ignore_errors: yes
-- include: vscode.yml
+- include_tasks: vscode.yml
   when: check_vscode.stdout != ""
